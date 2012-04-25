@@ -1,0 +1,11 @@
+/* humanstxt.org */
+
+/* TEAM */
+  In case of emergency contact person below:
+  Name: Krzysztof Urbas
+  Site: myviews.pl
+  Twitter: @krzysu
+  Location: Wroclaw, Poland
+
+/* THANKS */   
+  To Thomas Reynolds for creating Middleman
