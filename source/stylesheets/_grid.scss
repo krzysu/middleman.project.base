@@ -1,0 +1,27 @@
+.with-columns {
+  @include pie-clearfix;
+
+  > div:last-child {
+    margin-right: 0;
+  }
+}
+
+@mixin column-base {
+  float: left;
+  margin-right: 3.5%;
+}
+
+.one-from-three {
+  @include column-base;
+  width: 31%;
+}
+
+.two-from-three {
+  @include column-base;
+  width: 65.5%;
+}
+
+.one-from-two {
+  @include column-base;
+  width: 48.25%;
+}

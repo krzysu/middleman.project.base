@@ -1,0 +1,11 @@
+.ie8, .ie7 {
+  
+}
+
+.ie7 {
+  .some-el li { // display: inline-block fix
+    zoom: 1;
+    display: inline;
+    margin-right: 2px;
+  }
+}

@@ -1,21 +1,43 @@
+@mixin media-informer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 6px 12px;
+}
 
 @media only screen and (max-width : 480px) {
-    header:after{content:'smarphone';}
+  body:after {
+    content: 'smartphone';
+    @include media-informer;
+  }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-    header:after{content:'better smartfone';}
+  body:after {
+    content: 'better smartphone';
+    @include media-informer;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    header:after{content:'ipad';}
+  body:after {
+    content: 'ipad';
+    @include media-informer;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-    header:after{content:'normal';}
+  body:after {
+    content: 'normal';
+    @include media-informer;
+  }
 }
 
 @media only screen and (min-width : 1280px) {
-    header:after{content:'large';}
+  body:after {
+    content: 'large';
+    @include media-informer;
+  }
 }
-

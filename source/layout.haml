@@ -1,27 +1,56 @@
 !!! 5
-%html
+<!--[if lt IE 7]> <html class="ie6 no-js"> <![endif]-->
+<!--[if IE 7]> <html class="ie7 no-js"> <![endif]-->
+<!--[if IE 8]> <html class="ie8 no-js"> <![endif]-->
+<!--[if gt IE 8]><!-->
+%html.no-js
+  <!--<![endif]-->
+
   %head
-    %title title
+    %title Your Project Title
     %meta{:charset => "utf-8"}
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
     %meta{:content => "", :name => "description"}
     %meta{:content => "", :name => "author"}
     %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}
-    = stylesheet_link_tag "styles"
+
+    // check if JS is enabled in browser
+    :javascript
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'') + ' js';
+
+    /[if lt IE 9]
+      %script{:src => "http://html5shiv.googlecode.com/svn/trunk/html5.js"}
+      = javascript_include_tag 'lib/selectivizr-min.js'
+
+    = stylesheet_link_tag "application"
     = yield_content :head
+  
+    // google analytics
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'xxxx']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
 
   %body{:class => page_classes}
-    #container
-      %header
-        header
-      
-      #main{:role => "main"}
+    
+    %header#header
+      .wrapper
+
+    #content
+      .wrapper
         = yield
 
-      %footer
-        footer
+    %footer#footer
+      .wrapper
 
-    
-    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"}
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
+    = javascript_include_tag "application"
     = yield_content :js
 
