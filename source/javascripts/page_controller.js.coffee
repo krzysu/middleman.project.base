@@ -3,4 +3,4 @@ $ ->
 
 class PageController
   constructor: ->
-    console.log('scripts inited')
+    new AppName.Example()

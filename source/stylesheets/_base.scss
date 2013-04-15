@@ -3,18 +3,12 @@ body {
   font-size: $font-size-base;
   line-height: $line-height-base;
   color: $color-base;
-  margin: 0 10px;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: $font-header;
   line-height: 1.3em;
   color: $color-base;
-}
-
-h1 {
-  font-size: 2em;
-  font-family: $font-header;
-  margin-bottom: 20px;
 }
 
 /* links */

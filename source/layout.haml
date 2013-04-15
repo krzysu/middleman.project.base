@@ -20,11 +20,11 @@
 
     /[if lt IE 9]
       %script{:src => "http://html5shiv.googlecode.com/svn/trunk/html5.js"}
-      = javascript_include_tag 'lib/selectivizr-min.js'
+      = javascript_include_tag 'ie/selectivizr-min.js'
 
     = stylesheet_link_tag "application"
     = yield_content :head
-  
+
     // google analytics
     :javascript
       var _gaq = _gaq || [];
@@ -39,7 +39,7 @@
 
 
   %body{:class => page_classes}
-    
+
     %header#header
       .wrapper
 
@@ -50,7 +50,7 @@
     %footer#footer
       .wrapper
 
-    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
     = javascript_include_tag "application"
     = yield_content :js
 

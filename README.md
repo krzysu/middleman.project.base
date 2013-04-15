@@ -14,6 +14,9 @@ description: __my environment for front-end development__, you can use haml/sass
 -   do your development
 -   run `middleman build` if you ready
 
+## Plugins
+
+-   `middleman-livereload` - install extension for your browser to use livereload feature
 
 * * *
-prepared by Krzysztof Urbas (@krzysu), check the Middleman licence
+prepared by Krzysztof Urbas (@krzysu), check the [Middleman](http://middlemanapp.com/) licence
